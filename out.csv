@@ -1,0 +1,6 @@
+,$,(,),*,+,num
+E,synch,E->T E',synch,error,error,E->T E'
+E',E'->#,error,E'->#,error,E'->+ T E',error
+F,synch,F->( E ),synch,synch,synch,F->num
+T,synch,T->F T',synch,error,synch,T->F T'
+T',T'->#,error,T'->#,T'->* F T',T'->#,error

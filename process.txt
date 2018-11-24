@@ -1,0 +1,477 @@
+************************Process Begin************************
+----------------------------------------------------------
+[Stack Top] E
+[Current Token] (
+[Stack] ['$', 'E']
+[Accepted Tokens] []
+[Using production] E -> T E'
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] (
+[Stack] ['$', "E'", 'T']
+[Accepted Tokens] []
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] (
+[Stack] ['$', "E'", "T'", 'F']
+[Accepted Tokens] []
+[Using production] F -> ( E )
+----------------------------------------------------------
+[Stack Top] (
+[Current Token] (
+[Stack] ['$', "E'", "T'", ')', 'E', '(']
+[Accepted Tokens] []
+[Successful Match] pop symbol: (
+----------------------------------------------------------
+[Stack Top] E
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', 'E']
+[Accepted Tokens] ['(']
+[Using production] E -> T E'
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", 'T']
+[Accepted Tokens] ['(']
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F']
+[Accepted Tokens] ['(']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'num']
+[Accepted Tokens] ['(']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'", "T'"]
+[Accepted Tokens] ['(', 'num']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'"]
+[Accepted Tokens] ['(', 'num']
+[Using production] E' -> + T E'
+----------------------------------------------------------
+[Stack Top] +
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'", 'T', '+']
+[Accepted Tokens] ['(', 'num']
+[Successful Match] pop symbol: +
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", 'T']
+[Accepted Tokens] ['(', 'num', '+']
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F']
+[Accepted Tokens] ['(', 'num', '+']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'num']
+[Accepted Tokens] ['(', 'num', '+']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')', "E'"]
+[Accepted Tokens] ['(', 'num', '+', 'num']
+[Using production] E' -> #
+----------------------------------------------------------
+[Stack Top] )
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')']
+[Accepted Tokens] ['(', 'num', '+', 'num']
+[Successful Match] pop symbol: )
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] *
+[Stack] ['$', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', ')']
+[Using production] T' -> * F T'
+----------------------------------------------------------
+[Stack Top] *
+[Current Token] *
+[Stack] ['$', "E'", "T'", 'F', '*']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')']
+[Successful Match] pop symbol: *
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] (
+[Stack] ['$', "E'", "T'", 'F']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*']
+[Using production] F -> ( E )
+----------------------------------------------------------
+[Stack Top] (
+[Current Token] (
+[Stack] ['$', "E'", "T'", ')', 'E', '(']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*']
+[Successful Match] pop symbol: (
+----------------------------------------------------------
+[Stack Top] E
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', 'E']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(']
+[Using production] E -> T E'
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", 'T']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(']
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'num']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num']
+[Using production] E' -> + T E'
+----------------------------------------------------------
+[Stack Top] +
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'", 'T', '+']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num']
+[Successful Match] pop symbol: +
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", 'T']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+']
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'num']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+', 'num']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')', "E'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+', 'num']
+[Using production] E' -> #
+----------------------------------------------------------
+[Stack Top] )
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+', 'num']
+[Successful Match] pop symbol: )
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] $
+[Stack] ['$', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+', 'num', ')']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] $
+[Stack] ['$', "E'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+', 'num', ')']
+[Using production] E' -> #
+----------------------------------------------------------
+[Stack Top] $
+[Current Token] $
+[Stack] ['$']
+[Accepted Tokens] ['(', 'num', '+', 'num', ')', '*', '(', 'num', '+', 'num', ')']
+************************Process End**************************
+************************Process Begin************************
+----------------------------------------------------------
+[Stack Top] E
+[Current Token] (
+[Stack] ['$', 'E']
+[Accepted Tokens] []
+[Using production] E -> T E'
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] (
+[Stack] ['$', "E'", 'T']
+[Accepted Tokens] []
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] (
+[Stack] ['$', "E'", "T'", 'F']
+[Accepted Tokens] []
+[Using production] F -> ( E )
+----------------------------------------------------------
+[Stack Top] (
+[Current Token] (
+[Stack] ['$', "E'", "T'", ')', 'E', '(']
+[Accepted Tokens] []
+[Successful Match] pop symbol: (
+----------------------------------------------------------
+[Stack Top] E
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', 'E']
+[Accepted Tokens] ['(']
+[Using production] E -> T E'
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", 'T']
+[Accepted Tokens] ['(']
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F']
+[Accepted Tokens] ['(']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'num']
+[Accepted Tokens] ['(']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')', "E'", "T'"]
+[Accepted Tokens] ['(', 'num']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')', "E'"]
+[Accepted Tokens] ['(', 'num']
+[Using production] E' -> #
+----------------------------------------------------------
+[Stack Top] )
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')']
+[Accepted Tokens] ['(', 'num']
+[Successful Match] pop symbol: )
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] $
+[Stack] ['$', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', ')']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] $
+[Stack] ['$', "E'"]
+[Accepted Tokens] ['(', 'num', ')']
+[Using production] E' -> #
+----------------------------------------------------------
+[Stack Top] $
+[Current Token] $
+[Stack] ['$']
+[Accepted Tokens] ['(', 'num', ')']
+************************Process End**************************
+************************Process Begin************************
+----------------------------------------------------------
+[Stack Top] E
+[Current Token] (
+[Stack] ['$', 'E']
+[Accepted Tokens] []
+[Using production] E -> T E'
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] (
+[Stack] ['$', "E'", 'T']
+[Accepted Tokens] []
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] (
+[Stack] ['$', "E'", "T'", 'F']
+[Accepted Tokens] []
+[Using production] F -> ( E )
+----------------------------------------------------------
+[Stack Top] (
+[Current Token] (
+[Stack] ['$', "E'", "T'", ')', 'E', '(']
+[Accepted Tokens] []
+[Successful Match] pop symbol: (
+----------------------------------------------------------
+[Stack Top] E
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', 'E']
+[Accepted Tokens] ['(']
+[Using production] E -> T E'
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", 'T']
+[Accepted Tokens] ['(']
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F']
+[Accepted Tokens] ['(']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'num']
+[Accepted Tokens] ['(']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'", "T'"]
+[Accepted Tokens] ['(', 'num']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'"]
+[Accepted Tokens] ['(', 'num']
+[Using production] E' -> + T E'
+----------------------------------------------------------
+[Stack Top] +
+[Current Token] +
+[Stack] ['$', "E'", "T'", ')', "E'", 'T', '+']
+[Accepted Tokens] ['(', 'num']
+[Successful Match] pop symbol: +
+----------------------------------------------------------
+[Stack Top] T
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", 'T']
+[Accepted Tokens] ['(', 'num', '+']
+[Using production] T -> F T'
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F']
+[Accepted Tokens] ['(', 'num', '+']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'num']
+[Accepted Tokens] ['(', 'num', '+']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] *
+[Stack] ['$', "E'", "T'", ')', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num']
+[Using production] T' -> * F T'
+----------------------------------------------------------
+[Stack Top] *
+[Current Token] *
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F', '*']
+[Accepted Tokens] ['(', 'num', '+', 'num']
+[Successful Match] pop symbol: *
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'F']
+[Accepted Tokens] ['(', 'num', '+', 'num', '*']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", ')', "E'", "T'", 'num']
+[Accepted Tokens] ['(', 'num', '+', 'num', '*']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')', "E'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num']
+[Using production] E' -> #
+----------------------------------------------------------
+[Stack Top] )
+[Current Token] )
+[Stack] ['$', "E'", "T'", ')']
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num']
+[Successful Match] pop symbol: )
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] *
+[Stack] ['$', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num', ')']
+[Using production] T' -> * F T'
+----------------------------------------------------------
+[Stack Top] *
+[Current Token] *
+[Stack] ['$', "E'", "T'", 'F', '*']
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num', ')']
+[Successful Match] pop symbol: *
+----------------------------------------------------------
+[Stack Top] F
+[Current Token] num
+[Stack] ['$', "E'", "T'", 'F']
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num', ')', '*']
+[Using production] F -> num
+----------------------------------------------------------
+[Stack Top] num
+[Current Token] num
+[Stack] ['$', "E'", "T'", 'num']
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num', ')', '*']
+[Successful Match] pop symbol: num
+----------------------------------------------------------
+[Stack Top] T'
+[Current Token] $
+[Stack] ['$', "E'", "T'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num', ')', '*', 'num']
+[Using production] T' -> #
+----------------------------------------------------------
+[Stack Top] E'
+[Current Token] $
+[Stack] ['$', "E'"]
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num', ')', '*', 'num']
+[Using production] E' -> #
+----------------------------------------------------------
+[Stack Top] $
+[Current Token] $
+[Stack] ['$']
+[Accepted Tokens] ['(', 'num', '+', 'num', '*', 'num', ')', '*', 'num']
+************************Process End**************************
